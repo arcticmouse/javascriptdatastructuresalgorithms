@@ -1,4 +1,5 @@
 //LIFO
+//temporary container to handle data in that order
 //functions: push, pop, peek, length/size
 //in js: array or a class
 

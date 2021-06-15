@@ -1,7 +1,9 @@
 //holds data
 //FIFO
+////temporary container to handle data in that order
 //store line, print queue
-//can implement with an array
+//functions: printcollection, enqueue, dequeue, front, size, isEmpty
+//can implement with an array or object
 
 function Queue () { 
     collection = [];

@@ -1,0 +1,36 @@
+collections of things & relationships (nodes) and connections between them (edges)
+undirected: no directions on edges - social network of people
+directed: directions on edges - internet and web page links
+
+3 ways to represent:
+1. adjacency list: assoc each vertix w collection of neighboring vertices/edges
+var undirectedG = {
+    n1: ["n2", "n3"],
+    n2: ["n1"],
+    n3: ["n3"]
+}
+var undirectedGArr = [
+    [1, 2], //node1
+    [0],    //node 2
+    [2],    //node 3
+]
+
+2. adjacency matrix - matix of nums where num reps an edge (0 = no edge, 1 = edge)
+elements & nodes needs to be same amount
+good to rep a directed graph
+var adjMat = [
+    [0, 1, 1],
+    [0, 0, 0],
+    [1, 0, 0]
+]
+
+3. incidence matrix: 2 dimensional array. rows = nodes, col = edges. so uneven number of rows and columns can exist.
+for directed graph -1 for edge leaving a node, 1 entering a node 
+var incMatDir = [
+    [1, 0, -1, 1],
+    [-1, 1, 0, 0],
+    [0, -1, 1, 0],
+    [0, 0, 0, -1]
+]
+
+Can have weighted edges, depenging on application

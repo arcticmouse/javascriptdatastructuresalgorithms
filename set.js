@@ -1,5 +1,7 @@
 //like array but no duplicates, no order
 //check for the presence of an item
+//perform operations on mulitple values at once, test a value for membership
+//functions: has, values, add, remove, size, remove, intersection, difference, subset
 
 function mySet() {
     // the var collection will hold the set

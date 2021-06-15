@@ -1,9 +1,11 @@
 //binary search tree
 //can only have 2 branches for every node
 //ordered - each left subtree less than or equal to parent / right greater than or equal to
-
-
+//quick search, insertions, deletions, and maintains order
 //two classes: the node and bst(binary search tree)
+//functions: add, findMin, findMax, find, isPresent, remove, isBalanced, findMinHeight, findMaxHeight, inOrder, preOrder, postOrder, levelOrder
+
+
 class Node {
     constructor(data, left = null, right = null) {
       this.data = data;
@@ -160,7 +162,7 @@ class Node {
       } else {
         var result = new Array();
         function traverseInOrder(node) {       
-          node.left && traverseInOrder(node.left);
+          node.left && traverseInOrder(node.left); //if node.left is true (if it exists) then run traverseInOrder
           result.push(node.data);
           node.right && traverseInOrder(node.right);
         }
@@ -240,8 +242,15 @@ class Node {
   console.log(bst.findMinHeight()); //2
   console.log(bst.findMaxHeight()); //3
   console.log(bst.isBalanced()); //true
-  console.log('inOrder: ' + bst.inOrder()); //inOrder: 3,4,5,6,7,9,10,17,20,22
-  console.log('preOrder: ' + bst.preOrder()); //preOrder: 9,4,3,6,5,7,17,10,22,20
-  console.log('postOrder: ' + bst.postOrder()); //postOrder: 3,5,7,6,4,10,20,22,17,9
   
+  
+  //tree traversal methods
+
+  //in order: begin at left most node, then do all numbers in order, end at right most node 
+  console.log('inOrder: ' + bst.inOrder()); //inOrder: 3,4,5,6,7,9,10,17,20,22
+  //pre order: root nodes first then leafs below
+  console.log('preOrder: ' + bst.preOrder()); //preOrder: 9,4,3,6,5,7,17,10,22,20
+  //post order: leaf nodes first, then roots
+  console.log('postOrder: ' + bst.postOrder()); //postOrder: 3,5,7,6,4,10,20,22,17,9
+  //level order: breadth first: all nodes in a given level in a tree before going on to the next level
   console.log('levelOrder: ' + bst.levelOrder()); //levelOrder: 9,4,17,3,6,10,22,5,7,20
