@@ -72,3 +72,18 @@ console.log(map2.get('hello')); //string value
 console.log(map2.get(keyObj)); //obj value
 console.log(map2.get(keyFunc)); //func value
 console.log(map2.get(NaN)); //NaN value
+
+/* adding to a map
+if(map.has(w)) {
+	map.get(w).val++
+} else map.set(w, {val:1})
+*/
+/*
+    arr.forEach(a => {
+        if(map.has(a)){
+            map.set(a, map.get(a)+1);
+        } else { map.set(a, 1); }
+    })
+*/
+
+//let sorted = new Map([...map.entries()].sort((a, b) => a[0]-b[0]))
